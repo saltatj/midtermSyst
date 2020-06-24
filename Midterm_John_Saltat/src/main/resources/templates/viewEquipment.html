@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>View Equipment</title>
+</head>
+<body>
+<h1>View Equipment</h1>
+<table> 
+
+<tr>
+<th>Store Name</th>
+<th>Equipment Name</th>
+<th>Price</th>
+<th>Quantity</th>
+
+
+</tr>
+
+<tr th:each="poolEquipment:${poolEquipment}">
+
+<td th:text="${poolEquipment.storeName}"></td>
+<td th:text="${poolEquipment.name}"></td>
+<td th:text="${poolEquipment.price}"></td>
+<td th:text="${poolEquipment.quantity}"></td>
+</tr>
+<a href="../">Back</a> 
+</table>
+</body>
+</html>

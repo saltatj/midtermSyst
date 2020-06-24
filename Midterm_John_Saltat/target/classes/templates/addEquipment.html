@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Part 4</title>
+<body>
+<h1>Add Equipment</h1>
+
+<form action="#" th:action="@{/add}" th:object="${poolEquipment}" method="get">
+<p>Name: <input type="text" th:field="*{name}"/></p>
+<p>Price: <input type="text" th:field="*{price}"/></p>
+<p>Quantity: <input type="text" th:field="*{quantity}"/></p>
+<p>Store: <select th:field="*{storeName}">
+<option th:each="c:*{storeName}"th:value="${c}"th:text="${c}"/>
+</select></p>
+<p><input type="submit"value="Submit"/></p> 
+<a href="../">back</a> 
+</form>
+</head>
+</body>
+</html>
